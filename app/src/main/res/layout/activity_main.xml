@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Bill Splitter"
+            android:id="@+id/textView2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bill Amount"
+            android:id="@+id/lbl1"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtBillAmount"
+            android:layout_below="@+id/textView2"
+            android:layout_toEndOf="@+id/lbl1"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Number in Party: 1"
+            android:id="@+id/tvNumParty"
+            android:layout_below="@+id/txtBillAmount"
+            android:layout_alignEnd="@+id/seekBar"
+            android:layout_marginTop="41dp" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_alignTop="@+id/tvNumParty"
+            android:layout_alignParentStart="true"
+            android:max="3"
+            android:progress="0"
+            android:indeterminate="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Extra charge per person"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/tvNumParty"
+            android:layout_alignEnd="@+id/linearLayout2" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout2"
+            android:layout_below="@+id/tvNumParty">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCharge1"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentStart="true"
+                android:text="0"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etChrage2"
+                android:text="0"
+                android:layout_below="@+id/textView3"
+                android:layout_toEndOf="@+id/etCharge1"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etChrage3"
+                android:text="0"
+                android:layout_below="@+id/textView3"
+                android:layout_toEndOf="@+id/etChrage2"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCharge4"
+                android:text="0"
+                android:layout_below="@+id/textView3"
+                android:layout_toEndOf="@+id/etChrage3"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Total bill for each person"
+            android:id="@+id/textView4"
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/button"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView4"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/linearLayout3">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentStart="true"
+                android:text="0"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText2"
+                android:text="0"
+                android:layout_below="@+id/textView3"
+                android:layout_toEndOf="@+id/editText"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText3"
+                android:text="0"
+                android:layout_below="@+id/textView3"
+                android:layout_toEndOf="@+id/editText2"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText4"
+                android:text="0"
+                android:layout_below="@+id/textView3"
+                android:layout_toEndOf="@+id/editText3"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
